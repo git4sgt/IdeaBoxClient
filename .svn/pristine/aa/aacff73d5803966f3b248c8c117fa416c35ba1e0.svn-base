@@ -1,0 +1,120 @@
+<div class="container-fluid fixedHeight" id="idea-questions">
+	<div id="slider" class="container">
+		<div class="inner-sliders col-md-12 col-sm-12 col-xs-12">
+			<div id="1" class="slide col-md-7 col-sm-8 col-xs-12">
+				<h2 class="question-header"><span class="question-no">1 -></span> Name of Idea or Project</h2>
+				<!-- <input type="text" name="question1" id="question1" class="questions" > -->
+				
+				<textarea name="question1" id="question1" class="questions"></textarea>
+				
+			</div>
+			<div id="2" class="slide col-md-7 col-sm-12 col-xs-12">
+				<h2 class="question-header"><span class="question-no">2 -></span> Why interested in this idea and what part you are interested in</h2>
+				
+				<textarea name="question1" id="question2" class="questions"></textarea>
+			</div>
+			<div id="3" class="slide col-md-7 col-sm-12 col-xs-12">
+				<h2 class="question-header"><span class="question-no">3 -></span> What are the technologies used</h2>
+				
+				<textarea name="question1" id="question3" class="questions"></textarea>
+			</div>
+			<div id="4" class="slide col-md-7 col-sm-12 col-xs-12">
+				<h2 class="question-header"><span class="question-no">4 -></span> Why are the technologies used?</h2>
+				
+				<textarea name="question1" id="question4" class="questions"></textarea>
+			</div>
+			<div id="5" class="slide col-md-7 col-sm-12 col-xs-12">
+				<h2 class="question-header"><span class="question-no">5 -></span> Choose a practice the idea belongs to and a Mentor if you need assistance</h2>
+				<select name="question1" id="question5" class="questions-selection" style="margin-right:16px;">
+					<option>Select the category</option>
+					<option value="java">Java</option>
+					<option value="Angularjs">Angularjs</option>
+					<option value="HTML">HTML</option>
+					<option value="css">CSS</option>
+				</select>
+				<select name="question1" id="question5" class="questions-selection">
+					<option>Choose Your Mentor</option>
+					<option value="java">Java</option>
+					<option value="Angularjs">Angularjs</option>
+					<option value="HTML">HTML</option>
+					<option value="css">CSS</option>
+				</select>
+			</div>
+			<div id="6" class="slide col-md-7 col-sm-7 col-xs-12">
+				<h2 class="question-header"><span class="question-no">6 -></span>Choose a practice the idea belongs to and a internal or external Mentor if you need assistance</h2>
+				<select name="question1" id="question6" class="questions-selection col-md-6 col-sm-6 col-xs-12" style="margin-right:16px;">
+					<option>Select the category</option>
+					<option value="java">Java</option>
+					<option value="Angularjs">Angularjs</option>
+					<option value="HTML">HTML</option>
+					<option value="css">CSS</option>
+				</select>
+				<select name="question1" id="question6" class="questions-selection col-md-6 col-sm-6 col-xs-12">
+					<option>Choose Your Mentor</option>
+					<option value="java">Java</option>
+					<option value="Angularjs">Angularjs</option>
+					<option value="HTML">HTML</option>
+					<option value="css">CSS</option>
+				</select>
+				<textarea name="question1" id="question6" class="questions" placeholder="External Mentor Details" style="margin-top:20px;color: #000;font-size: 20px;margin-top: 20px;padding-top: 19px;"></textarea>
+			</div>
+			<div id="7" class="slide col-md-7 col-sm-12 col-xs-12">
+				<h2 class="question-header"><span class="question-no">7 -></span>Drop your files related to idea so that others can understand it better <span class="optional-span">(optional)</span></h2>	
+				 <input type="file" id="fileselect" name="fileselect[]" multiple="multiple"  class="questions" style="display:none;"/>
+				<div id="filedrag" style="display:block !important;width : 100%;">Upload or drag and drop here</div>
+			</div>
+		</div>
+		<br/>
+		<div class="inner-slider2 col-md-7 col-sm-8 col-xs-12">
+			<div id="next-btn">
+				<div class="ok-btn">
+					<div class="ok-btn1"><input type="submit" value="Ok" class="input-ok"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  </div>
+					
+				</div>
+				<div class="ok-press">Press Enter</div>
+			</div>
+			<div id="previous-btn">Go Back</div><br/>
+			
+		</div>
+	</div>
+	
+</div>
+
+<script>
+var active = 0;
+	var answerArray = [];
+	  
+    jQuery(document).ready(function(){
+		var n = jQuery('#slider .inner-sliders .slide').length; 
+        jQuery('#slider .inner-sliders .slide').hide();
+        showElement(1);
+        jQuery("#next-btn").click(function(){
+			var curr = active-1;
+			//answerArray.push(jQuery('#question'+active).val());
+			answerArray.splice(curr, 1, jQuery('#question'+active).val());
+			
+            if (active < n) showElement(active + 1);
+			var progressBar = document.querySelector(".active .progress-line");
+			var scrollPercentage = (100 / 7) * active;
+			progressBar.style.width = scrollPercentage + "%";
+			console.log(answerArray);
+        });
+        jQuery("#previous-btn").click(function(){
+			var curr = active-1;
+			//answerArray.push(jQuery('#question'+active).val());
+			answerArray.splice(curr, 1, jQuery('#question'+active).val());
+            if (active > 1) showElement(active - 1);
+			var progressBar = document.querySelector(".active .progress-line");
+			var scrollPercentage = (100 / 7) * active;
+			progressBar.style.width = scrollPercentage + "%";
+			console.log(answerArray);
+        });
+    });
+    function showElement(id) {
+        jQuery('#slider .inner-sliders .slide').hide();
+		
+       jQuery('#' + id).show(500);
+        active = id;
+    }
+
+</script>

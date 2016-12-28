@@ -1,0 +1,584 @@
+#mainContainer {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    line-height: 0.42857143
+}
+
+#innerContainer {
+    height: 100%;
+    overflow: auto;
+    font-size: 48px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    line-height: 100%
+}
+
+#innerContainerWrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height:100%;
+    padding-top: 7%;
+    padding-bottom: 2%;
+}
+#scrollContainer{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    text-align: center;
+}
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@-moz-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.scroll-btn {
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -75px;
+    z-index: 50;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+
+.scroll-btn > * {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #7f8c8d;
+    color: #ffffff;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+    color: #ffffff;
+}
+
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 31px;
+    height: 51px;
+    margin: 0 auto 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 23px;
+}
+
+.scroll-btn .mouse > * {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+}
+
+video {
+    object-fit: fill;
+}
+
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.active .progress-border {
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+}
+
+.progress-border .progress-line {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    width: 0%;
+}
+
+.ng-scope {
+    font-family: 'Raleway', sans-serif;
+}
+
+.signin-signup {
+    height: 1000px;
+}
+
+.signin-btn {
+    padding: 37px;
+    border: 5px solid red;
+    text-align: center;
+    font-size: 30px;
+}
+
+.signup-btn {
+    padding: 37px;
+    border: 5px solid red;
+    text-align: center;
+    font-size: 30px;
+}
+
+.signin-side:hover {}
+
+.splitter {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background: url("../images/Group.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+}
+
+.splitter .splitter-item:first-child {
+    left: 0;
+}
+
+.splitter .splitter-item {
+    text-align: center;
+    transition: background-color 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
+.splitter .splitter-item {
+    height: 100%;
+    float: left;
+    top: 0;
+    /* width: 50%; */
+}
+
+.vertical-container {
+    display: table;
+    height: 100%;
+}
+
+.main-container,
+.vertical-container,
+.video-container {
+    position: relative;
+    width: 100%;
+}
+
+.vertical-container .vertical-content {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+
+.splitter .splitter-button {
+    color: #320d7f;
+    display: inline-block;
+    font-size: 32px;
+    height: 120px;
+    line-height: 1.1;
+    padding: 18px;
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+    width: 280px;
+    z-index: 1;
+}
+
+.splitter .splitter-item:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.splitter .splitter-button:hover:before {
+    background-color: grey;
+}
+
+.splitter .splitter-button:before {
+    /*border-color: #320d7f;
+    border-style: solid;
+    border-width: 12px; */
+    border: 12px solid grey;
+    content: "";
+    display: block;
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+    width: 280px;
+    z-index: -1;
+}
+
+.splitter .splitter-item.active .splitter-button,
+.splitter .splitter-button:hover {
+    color: #000 !important;
+}
+
+.splitter .splitter-item:hover a {
+    text-decoration: none;
+}
+
+.splitter .splitter-item.active .splitter-button:before,
+.splitter .splitter-item:hover .splitter-button:before {
+    border-color: #fff;
+    border-radius: 50%;
+    height: 280px;
+    top: -89px;
+    width: 280px;
+    background-color: #fff;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    #popupContact form {
+        padding: 0px !important;
+    }
+    div#popupContact {
+        width: 90% !important;
+    }
+}
+
+#idea-questions {
+    background: url("../images/Group.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+    position: relative;
+    width: 100%;
+}
+
+.questions {
+    outline: 2px dashed #2a9fd8;
+    height: 63px;
+    width: 100%;
+	line-height: 18px;
+	border: none;
+}
+
+#slider {
+    margin: 20% auto 0;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+.inner-sliders {
+    margin: 0 auto 26px;
+   
+}
+
+.question-header {
+    float: left;
+}
+
+#abc,
+#loginId {
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background: url("../images/Group.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 1);
+    overflow: auto
+}
+
+img#close {
+    cursor: pointer;
+    left: 52%;
+    position: relative;
+}
+
+div#popupContact {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    margin: 8% auto 0;
+    text-align: center;
+    width: 33%;
+}
+
+#popupContact form {
+    background-color: transparent;
+    max-width: 100%;
+    min-width: 250px;
+    padding: 10px 50px;
+}
+
+p {
+    margin-top: 30px
+}
+
+h2 {
+    margin: -10px -50px;
+    padding: 20px 35px;
+    text-align: center;
+    color: #fff;
+}
+
+#name,
+#username,
+#password {
+    background-image: url("../images/name.jpg");
+    background-position: 5px 7px;
+    background-repeat: no-repeat;
+    border: medium none;
+    font-size: 22px;
+    padding: 16px;
+    width: 87%;
+}
+
+.submit-btn {
+    background-position: 5px 7px;
+    background-repeat: no-repeat;
+    border: medium none;
+    font-size: 22px;
+    padding: 16px;
+    width: 87%;
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#submit {
+    text-decoration: none;
+    width: 70%;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 18px 0;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.dropdown-box {
+    font-size: 22px;
+    margin-top: 30px;
+    padding: 18px;
+    width: 87%;
+}
+
+.splitter-button:hover {
+    cursor: pointer;
+}
+
+.inner-slider2 {
+    float: none;
+    margin: 40px auto 0;
+}
+
+#next-btn {
+    float: left;
+}
+
+#next-btn {
+    border: 1px solid #ccc;
+    color: #2a9fd8;
+    float: left;
+    font-size: 19px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.ok-btn {
+    border: 1px solid;
+    padding: 5px;
+    float: left;
+}
+
+.question-header {
+    color: #000;
+}
+
+.question-no {
+    color: #2a9fd8;
+}
+
+#previous-btn {
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 20px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.ok-press {
+    float: left;
+    font-size: 12px;
+    padding-left: 3px;
+    padding-top: 12px;
+}
+
+.input-ok {
+    background: none repeat scroll 0 0 #fff;
+    border: medium none !important;
+    height: 20px;
+}
+
+img.logo-img {
+    height: 50px;
+}
+.questions-selection {
+    width: 48%;
+	height: 63px;
+    outline: 2px dashed #2a9fd8;
+	border: medium none;
+	font-size: 19px;
+}
+.optional-span {
+	opacity : 0.8;
+}
+ #filedrag {
+	
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0;
+	margin: 1em 0;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 7px;
+	cursor: default;
+}
+
+#filedrag.hover {
+	color: #f00;
+	border-color: #f00;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+}
+
+
+.category-dropdown{
+	width: 245px;
+    height: 50px;
+    border: 2px dashed #2a9fd8;
+	margin-left: -10px;
+}
+
+.mentor-dropdown{
+	width: 255px;
+    height: 50px;
+    border: 2px dashed #2a9fd8;
+	margin-left: 10px;
+	
+}
+
+
+
+.splitter .splitter-button {
+    color: #fff;
+    display: inline-block;
+    font-size: 27px;
+    height: 120px;
+    line-height: 1.1;
+    padding: 32px;
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+    width: 280px;
+    z-index: 1;
+}
+		
+		.splitter .splitter-item:hover a {
+    text-decoration: none;
+    color: black;
+}
+		
+		
+			
+.splitter .splitter-button:before {
+    border: 12px solid white;
+    content: "";
+    display: block;
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+    width: 280px;
+    z-index: -1;
+
+}
+.slide {
+    float: none;
+    margin: 0 auto;
+}

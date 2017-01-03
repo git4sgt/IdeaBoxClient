@@ -88,3 +88,36 @@
 		</div>
 	</div>
 </div>
+<script>
+    
+        var parent = document.getElementById('scrollContainer');
+        var child = document.getElementById('innerContainer');
+        child.style.right = child.clientWidth - child.offsetWidth + "px";
+
+        function sc(e) {
+            var scrollPercentage = 100 * e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight);
+            var centerElement = Math.floor(scrollPercentage / 100 * document.getElementById('innerContainer').childElementCount);
+            var lPElement = document.querySelectorAll("#innerContainer p");
+            var progressBar = document.querySelector(".active .introduction");
+            progressBar.style.width = scrollPercentage + "%";
+            lPElement[centerElement].style.opacity = "1";
+            lPElement[centerElement].style.transform = "matrix(1, 0, 0, 1, 0, 0)";
+
+            for (var i = 1; i <= 4; i++) {
+                var oValue = 1 - i * 0.25;
+                var mValue = 1 - i * 0.1;
+                if (lPElement[centerElement + i]) {
+                    lPElement[centerElement + i].style.opacity = oValue;
+                    lPElement[centerElement + i].style.transform = "matrix(" + mValue + "1, 0, 0, " + mValue + ", 0, 0)";
+                    lPElement[centerElement + i].style.transition = "transform 500ms";
+                }
+
+                if (lPElement[centerElement - i]) {
+                    lPElement[centerElement - i].style.opacity = oValue;
+                    lPElement[centerElement - i].style.transform = "matrix(" + mValue + "1, 0, 0, " + mValue + ", 0, 0)";
+                    lPElement[centerElement - i].style.transition = "transform 300ms";
+                }
+
+            }
+        }
+</script>

@@ -1,2 +1,3 @@
 #ignore SVN folder
 .svn/
+.brackets.json

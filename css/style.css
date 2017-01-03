@@ -25,11 +25,12 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
     padding-top: 7%;
     padding-bottom: 2%;
 }
-#scrollContainer{
+
+#scrollContainer {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -37,22 +38,23 @@ body {
 }
 
 #filedrag {
-            display: none;
-            font-weight: bold;
-            text-align: center;
-            padding: 1em 0;
-            margin: 1em 0;
-            color: #555;
-            border: 2px dashed #2a9fd8;
-            cursor: default;
-        }
-        
-        #filedrag.hover {
-            color: #2a9fd8;
-            border-color: #2a9fd8;
-            border-style: solid;
-            box-shadow: 0 3px 4px #2a9fd8;
-        }
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0;
+    color: #555;
+    border: 2px dashed #2a9fd8;
+    cursor: default;
+}
+
+#filedrag.hover {
+    color: #2a9fd8;
+    border-color: #2a9fd8;
+    border-style: solid;
+    box-shadow: 0 3px 4px #2a9fd8;
+}
+
 .text {
     text-align: center;
 }
@@ -344,8 +346,8 @@ header {
     outline: 2px dashed #2a9fd8;
     height: 63px;
     width: 100%;
-	line-height: 18px;
-	border: none;
+    line-height: 18px;
+    border: none;
 }
 
 #slider {
@@ -357,7 +359,6 @@ header {
 
 .inner-sliders {
     margin: 0 auto 26px;
-   
 }
 
 .question-header {
@@ -411,7 +412,6 @@ h2 {
 #name,
 #username,
 #password {
-    background-image: url("../images/name.jpg");
     background-position: 5px 7px;
     background-repeat: no-repeat;
     border: medium none;
@@ -458,13 +458,74 @@ h2 {
     cursor: pointer;
 }
 
-.inner-slider2 {
-    float: none;
-    margin: 40px auto 0;
+/*Share an Idea*/
+
+#innerContainerSA li {
+    list-style-type: none;
+    height: 264px;
+    border: 0.5px solid #eee;
+    box-shadow: 0px 2px 8px 2px #5f5f5f;
+    position: absolute;
+    width: 1000px;
+    background-color: rgb(239, 239, 239);
+    
 }
 
-#next-btn {
-    float: left;
+#innerContainerSA ul {
+    top: 10px;
+    position: relative;
+    left: 10px;
+    height: 100%;
+    padding: 0px;
+}
+
+.fullheight {
+    height: 100%;
+}
+
+.plusIcon {
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    background-color: #188caf;
+    width: 2%;
+    text-align: center;
+    font-size: 40px;
+}
+
+#scrollContainerSA {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#innerContainerSA {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("../images/Group.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 1);
+}
+
+.questions {
+    outline: 2px dashed #2a9fd8;
+    height: 70%;
+    width: 100%;
+    line-height: 18px;
+    border: none;
+}
+
+.question-header {
+    text-align: left;
+}
+
+.question-no {
+    color: #2a9fd8;
+}
+
+h3 {
+    margin-top: 7px;
+    margin-bottom: 2%;
 }
 
 #next-btn {
@@ -474,6 +535,7 @@ h2 {
     font-size: 19px;
     padding: 4px;
     cursor: pointer;
+    float: left;
 }
 
 .ok-btn {
@@ -482,20 +544,10 @@ h2 {
     float: left;
 }
 
-.question-header {
-    color: #000;
-}
-
-.question-no {
-    color: #2a9fd8;
-}
-
-#previous-btn {
-    border: 1px solid #ccc;
-    float: left;
-    margin-left: 20px;
-    padding: 16px;
-    cursor: pointer;
+.input-ok {
+    background: none repeat scroll 0 0 #fff;
+    border: medium none !important;
+    height: 20px;
 }
 
 .ok-press {
@@ -505,41 +557,46 @@ h2 {
     padding-top: 12px;
 }
 
-.input-ok {
-    background: none repeat scroll 0 0 #fff;
-    border: medium none !important;
-    height: 20px;
+.questions-selection {
+    border: medium none;
+    font-size: 19px;
+    height: 63px;
+    outline: 2px dashed #2a9fd8;
+    width: 48%;
 }
+
+
+/**/
 
 img.logo-img {
     height: 50px;
 }
+
 .questions-selection {
     width: 48%;
-	height: 63px;
+    height: 63px;
     outline: 2px dashed #2a9fd8;
-	border: medium none;
-	font-size: 19px;
+    border: medium none;
+    font-size: 19px;
 }
+
 .optional-span {
-	opacity : 0.8;
+    opacity: 0.8;
 }
-.category-dropdown{
-	width: 245px;
+
+.category-dropdown {
+    width: 245px;
     height: 50px;
     border: 2px dashed #2a9fd8;
-	margin-left: -10px;
+    margin-left: -10px;
 }
 
-.mentor-dropdown{
-	width: 255px;
+.mentor-dropdown {
+    width: 255px;
     height: 50px;
     border: 2px dashed #2a9fd8;
-	margin-left: 10px;
-	
+    margin-left: 10px;
 }
-
-
 
 .splitter .splitter-button {
     color: #fff;
@@ -554,14 +611,12 @@ img.logo-img {
     width: 280px;
     z-index: 1;
 }
-		
-		.splitter .splitter-item:hover a {
+
+.splitter .splitter-item:hover a {
     text-decoration: none;
     color: black;
 }
-		
-		
-			
+
 .splitter .splitter-button:before {
     border: 12px solid white;
     content: "";
@@ -573,9 +628,60 @@ img.logo-img {
     transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
     width: 280px;
     z-index: -1;
-
 }
+
 .slide {
     float: none;
     margin: 0 auto;
+}
+
+.glyph-color {
+    color: #2a9fd8;
+    font-size: 17px;
+    font-weight: normal !important;
+}
+
+#to-top {
+    cursor: pointer;
+}
+
+.skill-drop {
+    background-image: url("../images/Skill set.svg");
+    background-position: 2px 17px;
+    background-repeat: no-repeat;
+    color: grey !important;
+    padding-left: 30px;
+}
+
+.practice-drop {
+    background-image: url("../images/Practice.png");
+    background-position: 2px 23px;
+    background-repeat: no-repeat;
+    color: grey !important;
+    padding-left: 30px;
+}
+
+.location-drop {
+    background-image: url("../images/Location.svg");
+    background-position: 7px 23px;
+    background-repeat: no-repeat;
+    color: grey !important;
+    padding-left: 30px;
+}
+
+#name {
+    background-image: url("../images/User Name.svg");
+    background-position: 7px 15px;
+    background-repeat: no-repeat;
+    color: grey !important;
+    padding-left: 30px;
+}
+
+#passwords {
+    /* background: url("../images/Lock.svg") no-repeat scroll -4px 4px #fff; */
+    border: medium none;
+    font-size: 22px;
+    margin-top: 30px;
+    padding: 16px 16px 16px 33px;
+    width: 87%;
 }

@@ -685,3 +685,23 @@ img.logo-img {
     padding: 16px 16px 16px 33px;
     width: 87%;
 }
+#passwords {
+    font-size: 22px;
+    margin-top: 30px;
+    width: 78%;
+    background: url(../images/Lock.svg) 23px 11px no-repeat scroll rgb(255, 255, 255);
+    border-width: medium;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 16px 16px 16px 50px;
+}
+#eye {
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 16.5px;
+    padding-top: 25px;
+    border-width: medium;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
